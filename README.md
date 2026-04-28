@@ -1,12 +1,34 @@
 # Sistema de consulta de usuários (AD SOE e outros sistemas)
 
-Este projeto cria um utilitário em Python para consultar usuários selecionados em uma planilha CSV e indicar se eles estão presentes no **AD SOE** e em outros sistemas.
+Este projeto cria um utilitário para consultar usuários selecionados em uma planilha CSV e indicar se eles estão presentes no **AD SOE** e em outros sistemas.
 
 ## Requisitos
 
 - Python 3.10+
 
-## Como usar
+## Executável
+
+O projeto inclui um executável local chamado `sistema_usuarios`.
+
+1. Dê permissão de execução (se necessário):
+
+```bash
+chmod +x sistema_usuarios
+```
+
+2. Execute normalmente:
+
+```bash
+./sistema_usuarios \
+  --planilha dados_usuarios.csv \
+  --usuarios "joao,maria,ana" \
+  --coluna-usuario usuario \
+  --sistemas "AD SOE,SAP,VPN"
+```
+
+> Internamente, o executável chama `python3 sistema_usuarios.py`.
+
+## Como usar (script Python)
 
 ```bash
 python sistema_usuarios.py \
